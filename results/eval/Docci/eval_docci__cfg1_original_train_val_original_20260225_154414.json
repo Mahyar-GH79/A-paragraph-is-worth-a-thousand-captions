@@ -1,0 +1,17 @@
+{
+  "checkpoint": "/home/mahyar/Caption_or_Paragraph/blip_text_train/cfg1_original_train_val_original_20260225_154414/final_model.pt",
+  "ckpt_tag": "cfg1_original_train_val_original_20260225_154414",
+  "dataset": "DOCCI",
+  "num_samples": 14847,
+  "max_length": 128,
+  "TRAINED_BLIP": {
+    "DOCCI": {
+      "I2T_R@1": 0.40405469118340404,
+      "T2I_R@1": 0.34963292247592104,
+      "I2T_R@5": 0.6684178621943827,
+      "T2I_R@5": 0.6409375631440695,
+      "I2T_R@10": 0.7598841516804742,
+      "T2I_R@10": 0.7456725264363171
+    }
+  }
+}

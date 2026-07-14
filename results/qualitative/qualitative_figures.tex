@@ -1,0 +1,210 @@
+\begin{figure*}[t]
+    \centering
+    \setlength{\tabcolsep}{1pt}
+    \begin{tabular}{lcccccc}
+        \multicolumn{7}{l}{\parbox{0.95\textwidth}{\scriptsize \textbf{Query:} An outdoor, zoomed out, eye view of a glass filled with a dirt trail cutting across the field. The trail starts in the bottom right corner of the frame and continues diagonally to the left. Many lush trees with curled and gnarled trunks are to the right of the dirt trail. A large body of water is visible behind the trees. Hills are visible on the other side of the body of water. A red stone building with an awning sticking off the right side is partially visible in the left edge of the frame. A black window is visible on the stone building. Some stones are embedded into the surface of the grass. The sky is bright and clear.}} \\[4pt]
+        \scriptsize \textbf{Model} &
+        \scriptsize \textbf{Top-1} &
+        \scriptsize \textbf{Top-2} &
+        \scriptsize \textbf{Top-3} &
+        \scriptsize \textbf{Top-4} &
+        \scriptsize \textbf{Top-5} &
+        \scriptsize \textbf{GT} \\[3pt]
+                \scriptsize BLIP$_0$ &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/blip0/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/blip0/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/blip0/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/blip0/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/blip0/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/blip0/gt.jpg} \\[4pt]
+                \scriptsize CLIP$_0$ &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/clip/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/clip/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/clip/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/clip/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/clip/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/clip/gt.jpg} \\[4pt]
+                \scriptsize Long-CLIP-B &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_b/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_b/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_b/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_b/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_b/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_b/gt.jpg} \\[4pt]
+                \scriptsize Long-CLIP-L &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_l/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_l/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_l/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_l/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_l/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/longclip_l/gt.jpg} \\[4pt]
+                \scriptsize CFG5 (ours) &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/cfg5/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/cfg5/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/cfg5/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/cfg5/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/cfg5/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_0/cfg5/gt.jpg} \\
+    \end{tabular}
+    \caption{Qualitative text-to-image retrieval on DOCCI (sample 1). Top-5 retrieved images per model. Only CFG5 (ours) retrieves the ground truth at rank 1.}
+    \label{fig:qual_docci_0}
+\end{figure*}
+
+
+\begin{figure*}[t]
+    \centering
+    \setlength{\tabcolsep}{1pt}
+    \begin{tabular}{lcccccc}
+        \multicolumn{7}{l}{\parbox{0.95\textwidth}{\scriptsize \textbf{Query:} A close up top down view of a weathered black road with gray and darker areas. There are three quarter sized white circle stains on the road and two circles that are faded. One circle has a blackish center. To the right the sidewalk is cracked in a curved line in the right direction. There is a small area of green straight grass poking out of the lower left corner. It is daytime.}} \\[4pt]
+        \scriptsize \textbf{Model} &
+        \scriptsize \textbf{Top-1} &
+        \scriptsize \textbf{Top-2} &
+        \scriptsize \textbf{Top-3} &
+        \scriptsize \textbf{Top-4} &
+        \scriptsize \textbf{Top-5} &
+        \scriptsize \textbf{GT} \\[3pt]
+                \scriptsize BLIP$_0$ &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/blip0/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/blip0/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/blip0/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/blip0/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/blip0/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/blip0/gt.jpg} \\[4pt]
+                \scriptsize CLIP$_0$ &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/clip/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/clip/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/clip/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/clip/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/clip/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/clip/gt.jpg} \\[4pt]
+                \scriptsize Long-CLIP-B &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_b/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_b/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_b/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_b/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_b/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_b/gt.jpg} \\[4pt]
+                \scriptsize Long-CLIP-L &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_l/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_l/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_l/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_l/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_l/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/longclip_l/gt.jpg} \\[4pt]
+                \scriptsize CFG5 (ours) &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/cfg5/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/cfg5/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/cfg5/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/cfg5/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/cfg5/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_1/cfg5/gt.jpg} \\
+    \end{tabular}
+    \caption{Qualitative text-to-image retrieval on DOCCI (sample 2). Top-5 retrieved images per model. Only CFG5 (ours) retrieves the ground truth at rank 1.}
+    \label{fig:qual_docci_1}
+\end{figure*}
+
+
+\begin{figure*}[t]
+    \centering
+    \setlength{\tabcolsep}{1pt}
+    \begin{tabular}{lcccccc}
+        \multicolumn{7}{l}{\parbox{0.95\textwidth}{\scriptsize \textbf{Query:} An outdoor medium close up view of light cream and light brown brick building, the bottom third of the brick building is completely made up of the light brown bricks while the top two thirds are made up of the light cream bricks. The building consists of a small opening that leads to a closed shutter gate that has a metal frame towards the bottom of it, above the opening are black letters that read,''CONCESSIONS''. Beside the close shutter, there are two benches one on the left and the other on the right.}} \\[4pt]
+        \scriptsize \textbf{Model} &
+        \scriptsize \textbf{Top-1} &
+        \scriptsize \textbf{Top-2} &
+        \scriptsize \textbf{Top-3} &
+        \scriptsize \textbf{Top-4} &
+        \scriptsize \textbf{Top-5} &
+        \scriptsize \textbf{GT} \\[3pt]
+                \scriptsize BLIP$_0$ &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/blip0/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/blip0/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/blip0/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/blip0/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/blip0/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/blip0/gt.jpg} \\[4pt]
+                \scriptsize CLIP$_0$ &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/clip/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/clip/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/clip/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/clip/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/clip/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/clip/gt.jpg} \\[4pt]
+                \scriptsize Long-CLIP-B &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_b/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_b/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_b/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_b/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_b/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_b/gt.jpg} \\[4pt]
+                \scriptsize Long-CLIP-L &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_l/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_l/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_l/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_l/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_l/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/longclip_l/gt.jpg} \\[4pt]
+                \scriptsize CFG5 (ours) &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/cfg5/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/cfg5/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/cfg5/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/cfg5/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/cfg5/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_2/cfg5/gt.jpg} \\
+    \end{tabular}
+    \caption{Qualitative text-to-image retrieval on DOCCI (sample 3). Top-5 retrieved images per model. Only CFG5 (ours) retrieves the ground truth at rank 1.}
+    \label{fig:qual_docci_2}
+\end{figure*}
+
+
+\begin{figure*}[t]
+    \centering
+    \setlength{\tabcolsep}{1pt}
+    \begin{tabular}{lcccccc}
+        \multicolumn{7}{l}{\parbox{0.95\textwidth}{\scriptsize \textbf{Query:} An outdoor front view of a brick wall made up of nude colored bricks and white colored bricks, the bottom third of the wall is made up of only nude colored bricks, and the top two thirds of the wall is made up of white colored bricks. The wall consists of two rectangular shaped windows that have black borders and a vertical black metal beam going through the center, the windows are positioned vertically. Above the windows, in the center of both of them, is a black colored flood light that is attached to the brick wall, directly above the light are black colored letters that read,''TICKETS''. The roof of the brick wall is an overhanging roof, and it provides shade to the top third of the wall, on the left side of the wall, to the left of both windows, is a silver water drain that starts at the ground floor, which is made up of cement, and runs all the way up the wall to the roof.}} \\[4pt]
+        \scriptsize \textbf{Model} &
+        \scriptsize \textbf{Top-1} &
+        \scriptsize \textbf{Top-2} &
+        \scriptsize \textbf{Top-3} &
+        \scriptsize \textbf{Top-4} &
+        \scriptsize \textbf{Top-5} &
+        \scriptsize \textbf{GT} \\[3pt]
+                \scriptsize BLIP$_0$ &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/blip0/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/blip0/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/blip0/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/blip0/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/blip0/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/blip0/gt.jpg} \\[4pt]
+                \scriptsize CLIP$_0$ &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/clip/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/clip/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/clip/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/clip/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/clip/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/clip/gt.jpg} \\[4pt]
+                \scriptsize Long-CLIP-B &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_b/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_b/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_b/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_b/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_b/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_b/gt.jpg} \\[4pt]
+                \scriptsize Long-CLIP-L &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_l/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_l/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_l/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_l/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_l/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/longclip_l/gt.jpg} \\[4pt]
+                \scriptsize CFG5 (ours) &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/cfg5/rank1.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/cfg5/rank2.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/cfg5/rank3.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/cfg5/rank4.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/cfg5/rank5.jpg} &
+        \includegraphics[width=0.13\textwidth]{figures/qualitative_docci/sample_3/cfg5/gt.jpg} \\
+    \end{tabular}
+    \caption{Qualitative text-to-image retrieval on DOCCI (sample 4). Top-5 retrieved images per model. Only CFG5 (ours) retrieves the ground truth at rank 1.}
+    \label{fig:qual_docci_3}
+\end{figure*}

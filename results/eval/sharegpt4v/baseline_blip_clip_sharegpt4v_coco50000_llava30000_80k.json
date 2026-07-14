@@ -1,0 +1,28 @@
+{
+  "sharegpt4v_json": "/home/mahyar/Caption_or_Paragraph/ShareGPT4v_json/sharegpt4v_instruct_gpt4-vision_cap100k.json",
+  "sample_size_total": 80000,
+  "sample_seed": 12345,
+  "coco_target": 50000,
+  "llava_target": 30000,
+  "sample_cache": "/home/mahyar/Caption_or_Paragraph/datasets/sharegpt4v_samples/sample_coco50000_llava30000_seed12345.json",
+  "BLIP": {
+    "ShareGPT4V_COCO50000_LLaVA30000_80k": {
+      "I2T_R@1": 0.4279125,
+      "I2T_R@5": 0.7442125,
+      "I2T_R@10": 0.8204125,
+      "T2I_R@1": 0.391325,
+      "T2I_R@5": 0.7012125,
+      "T2I_R@10": 0.7826625
+    }
+  },
+  "CLIP": {
+    "ShareGPT4V_COCO50000_LLaVA30000_80k": {
+      "I2T_R@1": 0.3180375,
+      "I2T_R@5": 0.6049125,
+      "I2T_R@10": 0.689775,
+      "T2I_R@1": 0.23645,
+      "T2I_R@5": 0.5018875,
+      "T2I_R@10": 0.5958
+    }
+  }
+}

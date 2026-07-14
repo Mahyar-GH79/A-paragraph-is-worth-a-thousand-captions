@@ -1,0 +1,17 @@
+{
+  "checkpoint": "/home/mahyar/Caption_or_Paragraph/blip_text_train/cfg5_cap_plus_para_20260227_181332/final_model.pt",
+  "ckpt_tag": "cfg5_cap_plus_para_20260227_181332",
+  "dataset": "DOCCI",
+  "num_samples": 14847,
+  "max_length": 128,
+  "TRAINED_BLIP": {
+    "DOCCI": {
+      "I2T_R@1": 0.6608068970162322,
+      "T2I_R@1": 0.6771738398329629,
+      "I2T_R@5": 0.8886643766417458,
+      "T2I_R@5": 0.8899440964504614,
+      "I2T_R@10": 0.93574459486765,
+      "T2I_R@10": 0.9397858153162255
+    }
+  }
+}

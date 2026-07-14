@@ -1,0 +1,17 @@
+{
+  "checkpoint": "/home/mahyar/Caption_or_Paragraph/blip_text_train/cfg3_orig_plus_randpos_val_allpos_plus_orig_20260226_155127/final_model.pt",
+  "ckpt_tag": "cfg3_orig_plus_randpos_val_allpos_plus_orig_20260226_155127",
+  "dataset": "DOCCI",
+  "num_samples": 14847,
+  "max_length": 128,
+  "TRAINED_BLIP": {
+    "DOCCI": {
+      "I2T_R@1": 0.337239846433623,
+      "T2I_R@1": 0.3045733144743046,
+      "I2T_R@5": 0.5847645989088704,
+      "T2I_R@5": 0.583417525426012,
+      "I2T_R@10": 0.6823600727419681,
+      "T2I_R@10": 0.6945510877618374
+    }
+  }
+}

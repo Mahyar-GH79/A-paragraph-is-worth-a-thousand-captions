@@ -1,0 +1,35 @@
+\begin{table}[t]
+\centering
+\caption{Dataset statistics for our CC3M-derived training set (500K samples).}
+\label{tab:supp_dataset_stats}
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Text type} & \textbf{Mean} & \textbf{Median} & \textbf{Min} & \textbf{Max} \\
+\midrule
+\multicolumn{5}{l}{\textit{Word count per text}} \\
+\midrule
+Original caption & 10.5 & 9 & 5 & 48 \\
+Generated positive caption & 11.7 & 11 & 1 & 59 \\
+Hard negative caption & 10.4 & 10 & 1 & 163 \\
+Paragraph & 93.5 & 92 & 4 & 189 \\
+\midrule
+\multicolumn{5}{l}{\textit{Paragraph structure}} \\
+\midrule
+Sentences per paragraph & 5.2 & 5 & 1 & 20 \\
+\midrule
+\multicolumn{5}{l}{\textit{Quality score (Llama 3.2 Vision, 0--10)}} \\
+\midrule
+Llama score & 6.2 & 6 & -1 & 10 \\
+\midrule
+\multicolumn{5}{l}{\textit{Counts per image}} \\
+\midrule
+Positive captions & 5.0 & --- & 0 & 5 \\
+Hard negative captions & 5.0 & --- & 0 & 5 \\
+Paragraphs & 1.0 & --- & --- & --- \\
+\midrule
+\multicolumn{5}{l}{\textit{Coverage: 100.0\% of samples have a paragraph}} \\
+\bottomrule
+\end{tabular}
+\end{table}

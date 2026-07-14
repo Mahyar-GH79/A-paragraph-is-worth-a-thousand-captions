@@ -1,0 +1,47 @@
+# --- Datasets (see README: download scripts + Hugging Face) -------------------
+datasets/
+ShareGPT4v_json/
+cc3m_qwen_llama_outputs/
+cc3m_blip_embed_dataset/
+
+# The generated CC3M annotations are released separately (720 MB, too large for
+# git). data/sample_cc3m_annotations.jsonl is a committed 200-row preview.
+!data/sample_cc3m_annotations.jsonl
+
+# --- Model weights and training runs ------------------------------------------
+blip_text_train/
+long_clip/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# --- Python -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Virtual environments -----------------------------------------------------
+env/
+tempenv/
+venv/
+.venv/
+
+# --- Editors / OS -------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# --- Scratch ------------------------------------------------------------------
+*.tmp
+*.log
+wandb/
+
+# The pre-refactor scripts, kept locally for reference. Safe to delete.
+legacy/

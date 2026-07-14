@@ -1,0 +1,38 @@
+\begin{table}[t]
+\centering
+\caption{Short-caption retrieval (Recall \%) on Flickr30k and COCO. \textbf{Bold} indicates best among fine-tuned configurations.}
+\label{tab:short_caption}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llcccccccccccc}
+\toprule
+ &  & \multicolumn{6}{c}{Flickr30k} & \multicolumn{6}{c}{COCO} \\
+\cmidrule(lr){3-8}
+\cmidrule(lr){9-14}
+ &  & \multicolumn{3}{c}{Image$\to$Text} & \multicolumn{3}{c}{Text$\to$Image} & \multicolumn{3}{c}{Image$\to$Text} & \multicolumn{3}{c}{Text$\to$Image} \\
+\cmidrule(lr){3-5}
+\cmidrule(lr){6-8}
+\cmidrule(lr){9-11}
+\cmidrule(lr){12-14}
+\textbf{Model} & \textbf{Training text} & R@1 & R@5 & R@10 & R@1 & R@5 & R@10 & R@1 & R@5 & R@10 & R@1 & R@5 & R@10 \\
+\midrule
+BLIP$_0$ (pretrained) & --- & 55.2 & 78.9 & 86.3 & 43.3 & 66.6 & 75.1 & 41.0 & 66.5 & 76.1 & 27.6 & 49.8 & 59.3 \\
+CLIP$_0$ (pretrained) & --- & 40.4 & 64.4 & 73.4 & 21.6 & 41.3 & 50.8 & 19.0 & 35.9 & 44.4 & 8.6 & 19.2 & 25.4 \\
+Long-CLIP-B & --- & 48.7 & 73.3 & 81.5 & 33.2 & 55.6 & 64.9 & 23.6 & 42.2 & 51.1 & 13.9 & 28.1 & 35.6 \\
+Long-CLIP-L & --- & 54.2 & 78.5 & 86.0 & 41.3 & 64.2 & 72.6 & 28.3 & 48.6 & 57.6 & 18.1 & 34.1 & 42.0 \\
+\midrule
+CFG1 & Original caption & 54.0 & 77.6 & 85.0 & 34.8 & 57.6 & 66.8 & 37.7 & 61.5 & 70.8 & 20.7 & 40.1 & 49.6 \\
+CFG2 & Random positive caption & 53.0 & 76.7 & 84.5 & 36.6 & 59.4 & 68.5 & 37.5 & 61.1 & 70.3 & 21.6 & 41.2 & 50.6 \\
+CFG3 & Original + rand positive & 54.5 & 78.1 & 85.6 & 36.7 & 59.5 & 68.6 & 36.3 & 59.6 & 68.9 & 21.4 & 40.9 & 50.3 \\
+CFG4 & Paragraph only & 53.0 & 76.5 & 84.3 & \textbf{37.7} & \textbf{60.4} & \textbf{69.2} & 37.3 & 61.0 & 70.4 & \textbf{22.9} & \textbf{42.9} & \textbf{52.2} \\
+CFG5 & Original cap + paragraph & \textbf{56.6} & \textbf{79.3} & 86.1 & 35.9 & 58.6 & 67.7 & 38.4 & 62.2 & 71.3 & 21.2 & 40.7 & 50.1 \\
+CFG6 & Rand pos + paragraph & 49.3 & 75.7 & 84.0 & 37.2 & 60.0 & 69.1 & 28.7 & 50.9 & 61.0 & 21.9 & 41.7 & 51.1 \\
+CFG7 & Original + pos + hard neg & 50.8 & 74.7 & 82.5 & 36.3 & 59.1 & 68.1 & 32.3 & 54.5 & 63.8 & 21.0 & 40.4 & 49.8 \\
+CFG8 & Original + all 5 positives & 53.7 & 77.2 & 85.0 & 36.7 & 59.4 & 68.5 & 36.6 & 59.9 & 69.3 & 21.2 & 40.7 & 50.0 \\
+CFG9 & Orig + all 5 pos + paragraph & 49.1 & 76.7 & 85.0 & 36.9 & 59.7 & 68.8 & 37.0 & 62.1 & 71.5 & 21.3 & 40.7 & 50.0 \\
+CFG10 & Orig + rand pos + paragraph & 54.4 & 78.9 & \textbf{86.3} & 36.8 & 59.4 & 68.6 & \textbf{38.5} & \textbf{62.9} & \textbf{72.0} & 21.3 & 40.8 & 50.1 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

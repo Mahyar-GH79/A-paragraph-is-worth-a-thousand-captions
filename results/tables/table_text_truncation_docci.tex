@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{I2T R@1 (\%) at different text truncation lengths on ShareGPT4V. Higher values at longer truncations indicate the model effectively uses additional text tokens.}
+\label{tab:truncation}
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Config} & 20 tok & 40 tok & 60 tok & 80 tok & 100 tok & 128 tok \\
+\midrule
+BLIP$_0$ (pretrained) & 35.6 & 48.9 & 51.3 & 53.8 & 55.0 & 55.2 \\
+\midrule
+C1 & 30.5 & 45.9 & 46.9 & 46.9 & 46.8 & 45.6 \\
+C3 & 30.0 & 45.8 & 46.8 & 45.1 & 42.0 & 38.5 \\
+C4 & \textbf{32.9} & \textbf{50.4} & \textbf{57.3} & 62.7 & \textbf{66.9} & 70.6 \\
+C5 & 32.0 & 50.3 & 55.8 & \textbf{62.7} & 66.8 & \textbf{70.7} \\
+C8 & 30.6 & 45.0 & 46.0 & 43.1 & 39.3 & 34.2 \\
+C9 & 32.6 & 48.7 & 49.0 & 61.1 & 66.3 & 70.0 \\
+CLIP$_0$ (pretrained) & 27.1 & 39.3 & 44.8 & --- & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}

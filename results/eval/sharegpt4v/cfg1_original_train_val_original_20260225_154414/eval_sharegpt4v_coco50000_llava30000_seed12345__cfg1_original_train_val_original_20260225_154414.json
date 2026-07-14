@@ -1,0 +1,18 @@
+{
+  "checkpoint": "/home/mahyar/Caption_or_Paragraph/blip_text_train/cfg1_original_train_val_original_20260225_154414/final_model.pt",
+  "ckpt_tag": "cfg1_original_train_val_original_20260225_154414",
+  "sharegpt4v_json": "/home/mahyar/Caption_or_Paragraph/ShareGPT4v_json/sharegpt4v_instruct_gpt4-vision_cap100k.json",
+  "sample_size_total": 80000,
+  "sample_seed": 12345,
+  "coco_target": 50000,
+  "llava_target": 30000,
+  "sample_cache": "/home/mahyar/Caption_or_Paragraph/datasets/sharegpt4v_samples/sample_coco50000_llava30000_seed12345.json",
+  "metrics": {
+    "I2T_R@1": 0.36215,
+    "I2T_R@5": 0.6585375,
+    "I2T_R@10": 0.7450125,
+    "T2I_R@1": 0.278375,
+    "T2I_R@5": 0.5621,
+    "T2I_R@10": 0.658675
+  }
+}

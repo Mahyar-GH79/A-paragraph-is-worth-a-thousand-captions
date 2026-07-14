@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Image-text alignment on ShareGPT4V. Paired cosine similarity.}
+\label{tab:align_sharegpt4v}
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Config} & \textbf{Mean} & \textbf{Median} & \textbf{Std} \\
+\midrule
+BLIP$_0$ & 0.487 & 0.490 & 0.048 \\
+\midrule
+C1: orig cap & 0.456 & 0.466 & 0.080 \\
+C3: orig+rpos & 0.429 & 0.441 & 0.090 \\
+C4: paragraph & 0.559 & 0.563 & 0.060 \\
+C5: orig+para & 0.605 & 0.610 & 0.058 \\
+C6: rpos+para & 0.603 & 0.609 & 0.058 \\
+C7: pos+neg & 0.364 & 0.391 & 0.140 \\
+C8: all5pos & 0.420 & 0.430 & 0.088 \\
+C9: 5pos+para & \textbf{0.658} & 0.665 & 0.056 \\
+\bottomrule
+\end{tabular}
+\end{table}

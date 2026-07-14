@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Image-text alignment on Flickr30k. Paired cosine similarity.}
+\label{tab:align_flickr30k}
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Config} & \textbf{Mean} & \textbf{Median} & \textbf{Std} \\
+\midrule
+BLIP$_0$ & 0.480 & 0.484 & 0.047 \\
+\midrule
+C1: orig cap & 0.481 & 0.490 & 0.078 \\
+C3: orig+rpos & \textbf{0.504} & 0.513 & 0.080 \\
+C4: paragraph & 0.477 & 0.485 & 0.083 \\
+C5: orig+para & 0.447 & 0.457 & 0.085 \\
+C6: rpos+para & 0.430 & 0.439 & 0.086 \\
+C7: pos+neg & 0.466 & 0.490 & 0.116 \\
+C8: all5pos & 0.494 & 0.504 & 0.081 \\
+C9: 5pos+para & 0.434 & 0.443 & 0.085 \\
+\bottomrule
+\end{tabular}
+\end{table}
