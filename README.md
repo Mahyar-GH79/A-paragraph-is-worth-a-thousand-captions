@@ -62,7 +62,7 @@ hf download Mahyar-79/cc3m-caption-or-paragraph \
     --repo-type dataset --local-dir cc3m_qwen_llama_outputs
 ```
 
-To regenerate it from scratch instead (needs a GPU and many hours):
+To regenerate it from scratch instead:
 
 ```bash
 python -m capara.data.generate_annotations --max-samples 500000
