@@ -159,11 +159,7 @@ python -m capara.train --config cfg5 --device cpu --shards-dir /tmp/fixture \
 ## Citation
 
 ```bibtex
-@article{ghazanfari2026paragraph,
-  title   = {A Paragraph is Worth a Thousand Captions},
-  author  = {Ghazanfari, Mahyar},
-  year    = {2026}
-}
+
 ```
 
 ## License
