@@ -14,50 +14,6 @@ DOCCI; every configuration without them lands between 19% and 40%, i.e. *below*
 the pretrained baseline. Adding more short positive captions does not help, and
 adding synthetic hard negatives is actively destructive.
 
----
-
-## Headline results
-
-Image-to-text Recall@1. Full tables, both directions and R@5/R@10, are in
-[`results/tables/`](results/tables/).
-
-| Model | Training text | DOCCI | ShareGPT4V | Flickr30k | COCO |
-|---|---|--:|--:|--:|--:|
-| BLIP (pretrained) | — | 49.5 | 42.8 | **55.2** | **41.0** |
-| CLIP (pretrained) | — | 43.4 | 31.8 | 40.4 | 19.0 |
-| Long-CLIP-B | — | 48.2 | 48.5 | 48.7 | 23.6 |
-| Long-CLIP-L | — | 51.6 | 52.6 | 54.2 | 28.3 |
-| CFG1 | Original caption | 40.4 | 36.2 | 54.0 | 37.7 |
-| CFG2 | Random positive | 18.6 | 27.7 | 53.0 | 37.5 |
-| CFG8 | Original + all 5 positives | 30.1 | 36.3 | 53.7 | 36.6 |
-| CFG7 | Original + positive + hard negative | 23.0 | 24.6 | 50.8 | 32.3 |
-| **CFG5** | **Original caption + paragraph** | **66.1** | 51.7 | 56.6 | 38.4 |
-| CFG4 | Paragraph only | 65.8 | 51.8 | 53.0 | 37.3 |
-| CFG6 | Random positive + paragraph | 66.1 | **52.0** | 49.3 | 28.7 |
-
-Three things to read off this table:
-
-1. **Paragraphs win on long text by a wide margin.** CFG5 beats pretrained BLIP by
-   +16.6 points on DOCCI and beats Long-CLIP-L, a model built specifically for long
-   text, by +14.5.
-2. **Short captions do not just fail to help — they hurt.** CFG2 (random positive
-   captions only) *halves* DOCCI recall relative to the baseline.
-3. **There is a real cost on short-caption retrieval.** Pretrained BLIP is still the
-   best model on COCO, and no fine-tuned configuration recovers it. Fine-tuning on
-   CC3M trades roughly 2–5 points of COCO recall for 16–20 points on DOCCI.
-
-### Ablations
-
-* **More positives make long-text retrieval worse.** Going from 1 to 5 positive
-  captions moves Flickr30k I2T from 52.1 to 53.7 but drops DOCCI from 38.4 to 30.2.
-* **Hard negatives are monotonically destructive.** 1 → 5 negatives sends ShareGPT4V
-  I2T from 11.9 to 2.3. Our GPT-4o audit of the data explains why: the synthetic
-  "hard negatives" score 7.98/10 for plausibility with a std of 1.86, meaning many of
-  them are not actually wrong descriptions of the image.
-* **The benefit saturates early.** 25% of the data already gives 64.9 DOCCI R@1
-  against 66.1 for the full 500k.
-
----
 
 ## Installation
 
@@ -199,36 +155,6 @@ python tests/make_fixture_shards.py --out-dir /tmp/fixture --shards 4 --rows-per
 python -m capara.train --config cfg5 --device cpu --shards-dir /tmp/fixture \
     --epochs 1 --batch-size 4 --max-steps-per-epoch 2 --num-workers 0 --val-shards 2
 ```
-
-## Known issues and caveats
-
-These are honest limitations of the study; they are documented here rather than
-quietly fixed, because the published numbers depend on them.
-
-* **ShareGPT4V is evaluated with a 77-token limit.** Its descriptions are far longer
-  than that, so the ShareGPT4V column understates the paragraph models. Our own
-  truncation study (`results/figures/fig_text_truncation_sharegpt4v.pdf`) shows CFG5
-  reaching 87.7 I2T R@1 at 128 tokens versus 51.7 at 77. `--max-text-length` defaults
-  reproduce the paper; raise it to 128 for the fairer comparison.
-* **COCO is evaluated on `train2017`, not the Karpathy test split**, and
-  `blip-itm-base-coco` was itself fine-tuned on COCO. The COCO column is internally
-  consistent across our configs but is not comparable to published COCO numbers.
-* **Per-epoch caption resampling never took effect in the published runs.** The
-  dataloader used persistent workers, which hold a private copy of the dataset, so
-  `set_epoch` never reached them and the randomly-sampled configs (cfg2, cfg3, cfg6,
-  cfg7, cfg10) drew the *same* caption every epoch. This is preserved by default for
-  reproducibility; pass `--no-persistent-workers` to make resampling actually happen.
-* **Step counts are computed before filtering.** Configs that require a paragraph drop
-  records that lack one, so they run slightly fewer steps than the cosine schedule
-  plans and their learning rate does not fully anneal.
-* **The original scripts encoded DOCCI in fp32 and every other benchmark in fp16.**
-  That was an accident of six separate scripts, not a decision, so `evaluate.py`
-  exposes a single `--fp16/--no-fp16` flag instead of reproducing the per-dataset
-  precision matrix. `--no-fp16` reproduces the original DOCCI numbers exactly; the
-  drift is far below the two decimals the paper reports.
-* **In-domain validation recall saturates near 100%** and is not meaningful: a 93-word
-  paragraph is almost a unique fingerprint for its image. Judge the models by the
-  benchmark numbers, not the training curves.
 
 ## Citation
 
