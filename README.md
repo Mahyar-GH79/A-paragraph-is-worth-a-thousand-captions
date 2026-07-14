@@ -58,7 +58,7 @@ A 200-row preview is committed at
 720 MB file is hosted on the Hugging Face Hub** (too large for git):
 
 ```bash
-huggingface-cli download <your-hf-username>/cc3m-caption-or-paragraph \
+hf download Mahyar-79/cc3m-caption-or-paragraph \
     --repo-type dataset --local-dir cc3m_qwen_llama_outputs
 ```
 
@@ -92,7 +92,7 @@ python -m capara.train --config cfg5
 # 3. Evaluate on all four benchmarks.
 python -m capara.evaluate --model blip-finetuned \
     --checkpoint blip_text_train/<run>/final_model.pt \
-    --datasets flickr30k coco docci sharegpt4v
+    --datasets flickr coco docci sharegpt4v
 
 # 4. Baselines and figures.
 python -m capara.evaluate --model blip --datasets docci
@@ -148,7 +148,7 @@ training scripts. `tests/test_equivalence.py` re-implements the original
 formulations verbatim and asserts the merged versions are numerically identical, so
 the unified trainer provably reproduces the published runs.
 
-To exercise the whole training loop without the real 3 GB shards:
+To exercise the whole training loop without the real 1 GB of embedding shards:
 
 ```bash
 python tests/make_fixture_shards.py --out-dir /tmp/fixture --shards 4 --rows-per-shard 32
