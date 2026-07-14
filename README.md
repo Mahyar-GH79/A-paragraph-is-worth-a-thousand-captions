@@ -62,8 +62,8 @@ Three things to read off this table:
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/caption-or-paragraph.git
-cd caption-or-paragraph
+git clone https://github.com/Mahyar-GH79/A-paragraph-is-worth-a-thousand-captions.git
+cd A-paragraph-is-worth-a-thousand-captions
 
 python -m venv env && source env/bin/activate
 pip install -e .            # add '.[quality]' for the GPT-4o judge, '.[dev]' for tests
@@ -233,8 +233,8 @@ quietly fixed, because the published numbers depend on them.
 ## Citation
 
 ```bibtex
-@article{ghazanfari2026caption,
-  title   = {Caption or Paragraph? Long Synthetic Descriptions for Image-Text Retrieval},
+@article{ghazanfari2026paragraph,
+  title   = {A Paragraph is Worth a Thousand Captions},
   author  = {Ghazanfari, Mahyar},
   year    = {2026}
 }
