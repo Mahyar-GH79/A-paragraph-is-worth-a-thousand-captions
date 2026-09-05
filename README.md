@@ -55,7 +55,7 @@ It expands a 10.5-word average caption into a 92.9-word average paragraph.
 
 A 200-row preview is committed at
 [`data/sample_cc3m_annotations.jsonl`](data/sample_cc3m_annotations.jsonl). **The full
-720 MB file is hosted on the Hugging Face Hub** (too large for git):
+720 MB file is hosted on the Hugging Face Hub**:
 
 ```bash
 hf download Mahyar-79/cc3m-caption-or-paragraph \
