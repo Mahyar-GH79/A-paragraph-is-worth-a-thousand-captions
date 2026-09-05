@@ -161,8 +161,3 @@ python -m capara.train --config cfg5 --device cpu --shards-dir /tmp/fixture \
 ```bibtex
 
 ```
-
-## License
-
-[MIT](LICENSE). The CC3M images are subject to their original terms; we release only
-the generated text annotations.
