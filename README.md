@@ -16,8 +16,9 @@ DOCCI; every configuration without them lands between 19% and 40%, i.e. *below*
 the pretrained baseline. Adding more short positive captions does not help, and
 adding synthetic hard negatives is actively destructive.
 
+---
 > **Accepted at the [ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation (MUCG)](https://mllm-mucg.github.io/ECCV2026/)**
-
+---
 ## Installation
 
 ```bash
