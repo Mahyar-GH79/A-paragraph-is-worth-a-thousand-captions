@@ -2,7 +2,7 @@
 # Caption or Paragraph?
 
 ---
-> **Accepted at the [ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation (MUCG)](https://mllm-mucg.github.io/ECCV2026/)**
+> **Accepted at the [ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation (MUCG)](https://mllm-mucg.github.io/ECCV2026/)**.
 ---
 
 **Long synthetic descriptions, not more short captions, are what fix long-text image retrieval.**
